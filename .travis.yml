@@ -6,6 +6,5 @@ before_install:
   - docker build -t rcomiskey/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run rcomiskey/docker-react npm run test -- --coverage
+  - docker run -e CI=true rcomiskey/docker-react npm run test -- --coverage
 
-  
